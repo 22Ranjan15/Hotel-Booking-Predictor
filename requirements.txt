@@ -1,0 +1,15 @@
+pandas 
+numpy
+seaborn
+google-cloud-storage
+scikit-learn
+joblib
+ipykernel
+pyyaml
+statsmodels
+imbalanced-learn
+xgboost 
+lightgbm
+mlflow
+
+# -e .
