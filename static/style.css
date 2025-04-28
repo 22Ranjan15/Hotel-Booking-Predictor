@@ -1,0 +1,221 @@
+/* Global Reset & Base Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+    --gray-color: #95a5a6;
+    --border-radius: 6px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #6D28D2;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+small {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--gray-color);
+    font-size: 0.85rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+button.secondary {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+button.secondary:hover {
+    background-color: #e6e6e6;
+}
+
+/* Result Styles */
+.result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.positive {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--success-color);
+}
+
+.negative {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--accent-color);
+}
+
+.result h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+}
+
+/* Footer */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6D28D2;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
