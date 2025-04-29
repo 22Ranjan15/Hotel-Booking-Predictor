@@ -20,6 +20,12 @@ COPY . .
 # Install the package in editable mode
 RUN pip install --no-cache-dir -e .
 
+# Copy the credentials file from the build context
+COPY gcp-key.json /tmp/gcp-key.json
+
+# Set the environment variable for ADC (Application Default Credentials)
+ENV GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp-key.json
+
 # Train the model before running the application
 RUN python pipeline/train_pipeline.py 
 
