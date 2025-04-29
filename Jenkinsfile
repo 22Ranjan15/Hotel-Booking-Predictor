@@ -60,5 +60,34 @@ pipeline{
                 }    
             }
         }
+
+        stage('Deploy to Google CLoud Run'){
+            steps{
+                withCredentials([file(credentialsId: 'gcp-key' , variable : 'GOOGLE_APPLICATION_CREDENTIALS')]){
+                    script{
+                        echo 'Deploy to Google CLoud Run.............'
+                        sh '''
+                        # Copy credentials into the build context
+                        cp ${GOOGLE_APPLICATION_CREDENTIALS} gcp-key.json
+
+                        export PATH=$PATH:${GCLOUD_PATH}
+
+                        gcloud auth activate-service-account --key-file=gcp-key.json # Use the copied key
+
+                        gcloud config set project ${GCP_PROJECT}
+
+                        gcloud run deploy ml-project \
+                            --image=gcr.io/${GCP_PROJECT}/ml-project:latest \
+                            --platform=managed \
+                            --region=us-central1 \
+                            --allow=unauthenticated
+
+                        # Clean up the copied credentials file
+                        rm gcp-key.json
+                        '''
+                    }
+                }    
+            }
+        }
     }
 }
