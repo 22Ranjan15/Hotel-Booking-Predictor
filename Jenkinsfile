@@ -51,13 +51,13 @@ pipeline{
 
                         docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
 
-                        docker push gcr.io/${GCP_PROJECT}/ml-project:latest 
+                        docker push gcr.io/${GCP_PROJECT}/ml-project:latest
 
                         # Clean up the copied credentials file
                         rm gcp-key.json
                         '''
                     }
-                }    
+                }
             }
         }
 
@@ -86,7 +86,7 @@ pipeline{
                         rm gcp-key.json
                         '''
                     }
-                }    
+                }
             }
         }
     }
