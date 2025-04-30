@@ -104,7 +104,7 @@ Hotel Reservations Prediction/
 ```
 
 ## 📊 Exploratory Data Analysis (EDA) and Model Selection
-For detailed information on the Exploratory Data Analysis (EDA), model selection process, and experimental results, please refer to the Jupyter Notebook: [`experiments.ipynb`](experiments.ipynb).
+For detailed information on the Exploratory Data Analysis (EDA), model selection process, and experimental results, please refer to the Jupyter Notebook: [`experiments.ipynb`](https://github.com/22Ranjan15/Hotel-Booking-Predictor/blob/main/notebooks/experiments.ipynb).
 
 Key highlights from the EDA and model selection process:
 
