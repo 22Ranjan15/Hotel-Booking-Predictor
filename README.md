@@ -163,7 +163,6 @@ Before you begin, ensure you have the following installed:
 
 ### Usage
 
-
 1. To run the Flask web application locally:
 
     ```bash
@@ -237,8 +236,12 @@ Once deployed, the application is accessible via a public HTTPS URL provided by 
 
 
 ## 🎥 Demo
-Watch the demo of the Hotel Booking Predictor in action:
-[Watch Video](https://drive.google.com/file/d/1uhwidCnIeHgFuDVlXu1CjRku0Trqkt__/view?usp=sharing).
+
+- 📽️ Watch the full demo of the Hotel Booking Predictor in action: [Watch Video](https://drive.google.com/file/d/1uhwidCnIeHgFuDVlXu1CjRku0Trqkt__/view?usp=sharing)
+
+- 🖼️ To see the user interface in action, check out the [UI Demo Images](https://github.com/22Ranjan15/Hotel-Booking-Predictor/tree/main/Demo/UI_Demo_Images)
+
+
 
 
 ## 📈 Performance
